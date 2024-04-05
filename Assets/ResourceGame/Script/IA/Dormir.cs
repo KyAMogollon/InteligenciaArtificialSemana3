@@ -38,16 +38,16 @@ public class Dormir : State
                 h_health.sleep = Mathf.Clamp(h_health.sleep + UnityEngine.Random.Range(10, 20), 0, 100);
                 if (h_health.sleep == 100)
                 {
-                    m_MachineState.NextState(TypeState.Jugar);
-                    playerController.ChoosePlace(0);
-                    h_health.dormir = false;
+                m_MachineState.NextState(TypeState.Jugar);
+                playerController.Move(TypePath.Jugar);
+                h_health.dormir = false;
 
                 }
                 h_health.hungry = Mathf.Clamp(h_health.hungry - UnityEngine.Random.Range(20, 30), 0, 100);
                 if (h_health.hungry == 0 && h_health.jugar == false && h_health.dormir == false && h_health.banno == false)
                 {
                     m_MachineState.NextState(TypeState.Comer);
-                    playerController.ChoosePlace(1);
+                    playerController.Move(TypePath.Comer);
                     h_health.comer = true;
 
                 }

@@ -39,7 +39,7 @@ public class Jugar : State
             {
                 Debug.Log("Me fui a dormir");
                 m_MachineState.NextState(TypeState.Dormir);
-                playerController.ChoosePlace(2);
+                playerController.Move(TypePath.Dormir);
                 h_health.dormir = true;
             }
 
@@ -49,7 +49,7 @@ public class Jugar : State
             {
                 Debug.Log("Me fui a comer");
                 m_MachineState.NextState(TypeState.Comer);
-                playerController.ChoosePlace(1);
+                playerController.Move(TypePath.Comer);
                 h_health.comer = true;
             }
 

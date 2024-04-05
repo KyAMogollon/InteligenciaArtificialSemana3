@@ -1678,9 +1678,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070424442}
+  - component: {fileID: 1070424461}
   - component: {fileID: 1070424452}
+  - component: {fileID: 1070424459}
   - component: {fileID: 1070424454}
   - component: {fileID: 1070424453}
+  - component: {fileID: 1070424458}
+  - component: {fileID: 1070424457}
+  - component: {fileID: 1070424463}
+  - component: {fileID: 1070424462}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1735,11 +1741,29 @@ MonoBehaviour:
     IsDrawGizmo: 1
     ColorPath: {r: 0, g: 0.990566, b: 0.17757785, a: 1}
     ColorCurrentPoint: {r: 1, g: 0.9864793, b: 0, a: 1}
+  - type: 2
+    paths:
+    - {fileID: 1677410805}
+    - {fileID: 1737546911}
+    - {fileID: 799729745}
+    - {fileID: 1820819714}
+    IsDrawGizmo: 1
+    ColorPath: {r: 0, g: 0.99215686, b: 0.9049475, a: 1}
+    ColorCurrentPoint: {r: 0, g: 0.3358345, b: 1, a: 1}
+  - type: 3
+    paths:
+    - {fileID: 42017256}
+    - {fileID: 334273739}
+    - {fileID: 715230348}
+    - {fileID: 1270144336}
+    IsDrawGizmo: 1
+    ColorPath: {r: 0, g: 0, b: 0, a: 1}
+    ColorCurrentPoint: {r: 0.31999823, g: 0.37434143, b: 0.4811321, a: 1}
   currentPath: 2
   currentPoint: {fileID: 0}
   indexcurrentPoint: 0
   stopdistance: 1
-  DrawAllPaths: 1
+  DrawAllPaths: 0
   IsDrawGizmo: 0
 --- !u!114 &1070424453
 MonoBehaviour:
@@ -1753,7 +1777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f065134bbee0f4ea2f5ee861b13c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestcurrentPath: 0
+  TestcurrentPath: 1
 --- !u!114 &1070424454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,6 +1794,112 @@ MonoBehaviour:
   maxSpeed: 5
   slowingDistance: 5
   stoppingDistance: 1
+--- !u!114 &1070424457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c50a48393a61d429e15e70043c746b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayTime: []
+  index: 0
+  type: 3
+  m_MachineState: {fileID: 0}
+  h_health: {fileID: 0}
+  playerController: {fileID: 0}
+--- !u!114 &1070424458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290f60a87042a2048a22e337a655c49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayTime: []
+  index: 0
+  type: 1
+  m_MachineState: {fileID: 0}
+  h_health: {fileID: 0}
+  playerController: {fileID: 0}
+--- !u!114 &1070424459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a7fd4af2bd8df4cba9a48c743bb350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sleep: 100
+  hungry: 100
+  wc: 0
+  jugar: 0
+  comer: 0
+  banno: 0
+  dormir: 0
+--- !u!114 &1070424461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60d1337e1dfd624194d5d414c95ba11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentState: {fileID: 0}
+  m_States: []
+  stateDefaul: 1
+--- !u!114 &1070424462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254c2a1bbec5e0248bf1b2257d78a279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayTime: []
+  index: 0
+  type: 2
+  m_MachineState: {fileID: 0}
+  h_health: {fileID: 0}
+  playerController: {fileID: 0}
+--- !u!114 &1070424463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d045258995a294291227d8eb909c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayTime: []
+  index: 0
+  type: 0
+  m_MachineState: {fileID: 0}
+  h_health: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &1108926198
 GameObject:
   m_ObjectHideFlags: 0

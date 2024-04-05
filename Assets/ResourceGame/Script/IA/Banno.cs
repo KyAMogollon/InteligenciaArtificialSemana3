@@ -43,16 +43,16 @@ public class Banno : State
                 if (h_health.sleep == 0 && h_health.jugar == false && h_health.comer == false && h_health.banno == false)
                 {
                     m_MachineState.NextState(TypeState.Dormir);
-                    playerController.ChoosePlace(2);
+                    playerController.Move(TypePath.Dormir);
                     h_health.dormir = true;
                 }
 
                 h_health.wc = Mathf.Clamp(h_health.wc - UnityEngine.Random.Range(20, 30), 0, 100);
                 if (h_health.wc == 0)
                 {
-                    m_MachineState.NextState(TypeState.Jugar);
-                    playerController.ChoosePlace(0);
-                    h_health.banno = false;
+                m_MachineState.NextState(TypeState.Jugar);
+                playerController.Move(TypePath.Jugar);
+                h_health.banno = false;
                 }
             //}
             return;

@@ -31,21 +31,20 @@ public class Comer : State
             index = index % arrayTime.Length;
 
             
-            //if(playerController.transform.position.x == playerController.Places[1].transform.position.x && playerController.transform.position.z == playerController.Places[1].transform.position.z)
-            //{
                 h_health.sleep = Mathf.Clamp(h_health.sleep - UnityEngine.Random.Range(1, 10), 0, 100);
                 if (h_health.sleep == 0 && h_health.jugar == false && h_health.comer == false && h_health.banno == false)
                 {
                     m_MachineState.NextState(TypeState.Dormir);
-                    playerController.ChoosePlace(2);
+                    playerController.Move(TypePath.Dormir);
                     h_health.dormir = true;
                 }
 
                 h_health.hungry = Mathf.Clamp(h_health.hungry + UnityEngine.Random.Range(10, 20), 0, 100);
                 if (h_health.hungry == 100)
                 {
+                    
                     m_MachineState.NextState(TypeState.Jugar);
-                    playerController.ChoosePlace(0);
+                    playerController.Move(TypePath.Jugar);
                     h_health.comer = false;
                 }
 
@@ -54,11 +53,10 @@ public class Comer : State
                 {
 
                     m_MachineState.NextState(TypeState.Banno);
-                    playerController.ChoosePlace(3);
+                    playerController.Move(TypePath.WC);
                     h_health.banno = true;
 
                 }
-            //} 
             return;
         }
         FrameRate += Time.deltaTime;

@@ -12,7 +12,7 @@ public class State : MonoBehaviour
     public TypeState type;
     public MachineState m_MachineState;
     public Health h_health;
-    public PlayerController playerController;
+    public Test playerController;
     protected void RandomArray()
     {
         for (int i = 0; i < arrayTime.Length; i++)
@@ -26,7 +26,7 @@ public class State : MonoBehaviour
         arrayTime = new float[10];
         m_MachineState = GetComponent<MachineState>();
         h_health = GetComponent<Health>();
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<Test>();
         RandomArray();
     }
     public virtual void Enter( )

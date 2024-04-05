@@ -73,7 +73,7 @@ public class PathFollowing : MonoBehaviour
 
 
         float distance = (transform.position - currentPoint.position).magnitude;
-        Debug.Log("distance: " + distance);
+        //Debug.Log("distance: " + distance);
         if (distance < stopdistance)
         {
             indexcurrentPoint++;
